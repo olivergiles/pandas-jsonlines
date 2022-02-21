@@ -7,9 +7,7 @@ scrapy framework.
 # Installation
 
 ```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
+pip install pandas-jsonlines
 ```
 
 ```bash
