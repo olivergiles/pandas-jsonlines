@@ -51,6 +51,8 @@ build:
 
 pypi_test:
 	@python3 setup.py sdist
+	@echo $(PYPI_USERNAME)
+	@echo $(TESTAPIKEY)
 	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME) -p $(TESTAPIKEY)
 
 pypi:
