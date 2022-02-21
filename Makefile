@@ -44,7 +44,7 @@ count_lines:
 # ----------------------------------
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
-PYPI_USERNAME= __token__
+PYPI_USERNAME= '__token__'
 TESTAPIKEY= {secrets.TESTPYPIKEY}
 build:
 	@python setup.py sdist bdist_wheel
