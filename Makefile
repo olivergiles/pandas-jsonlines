@@ -45,12 +45,13 @@ count_lines:
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
 PYPI_USERNAME= __token__
+TESTAPIKEY= {secrets.TESTPYPIKEY}
 build:
 	@python setup.py sdist bdist_wheel
 
 pypi_test:
 	@python3 setup.py sdist
-	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME)
+	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME) -p $(TESTAPIKEY)
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
