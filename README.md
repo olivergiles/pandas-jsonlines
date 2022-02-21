@@ -10,12 +10,9 @@ scrapy framework.
 pip install pandas-jsonlines
 ```
 
-```bash
-make clean install test
-```
-
 # Usage
 
-Go to `https://github.com/{group}/pandas-jsonlines` to see the project, manage issues,
-setup you ssh public key, ...
-
+```
+from pandas_jsonlines.read_jsonlines import read_jsonlines
+df = read_jsonlines("file.jsonlines")
+```
