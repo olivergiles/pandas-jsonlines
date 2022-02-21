@@ -6,3 +6,5 @@ raw_data/
 *.csv
 **/__pycache__/
 .env
+dist/pandas-jsonlines-1.0.tar.gz
+dist

@@ -25,6 +25,9 @@ jobs:
     - name: Install package and test
       run: |
          make install test clean
+    - name: Upload to pypi
+      run: |
+        make pypi_test
 
     strategy:
        matrix:
