@@ -45,6 +45,7 @@ count_lines:
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
 PYPI_USERNAME= __token__
+PYPI_PASSWORD=TEST_API
 build:
 	@python setup.py sdist bdist_wheel
 
@@ -52,7 +53,7 @@ pypi_test:
 	@python3 setup.py sdist
 	@echo $(PYPI_USERNAME)
 	@echo $(TESTAPIKEY)
-	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME) -p $(TEST_API)
+	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME)
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)

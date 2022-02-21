@@ -29,7 +29,7 @@ jobs:
       run: |
         make pypi_test
         with:
-          TEST_API: ${{secrets.TESTPYPIKEY}}
+          TEST_API: ${{ secrets.TESTPYPIKEY }}
     strategy:
        matrix:
-         python-version: [3.8, 3.9]
+         python-version: [3.8]
