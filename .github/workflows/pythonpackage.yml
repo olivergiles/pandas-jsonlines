@@ -25,10 +25,6 @@ jobs:
     - name: Install package and test
       run: |
          make install test clean
- #   - name: Upload to pypi
- #     run: |
- #         python3 setup.py sdist
-	#        twine upload --repository testpypi dist/* -u __token__ -p ${{ secrets.TESTPYPIKEY }}
     strategy:
        matrix:
          python-version: [3.8, 3.9]
