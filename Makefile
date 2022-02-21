@@ -50,7 +50,7 @@ build:
 
 pypi_test:
 	@python3 setup.py sdist
-	@python3 -m twine upload --repository testpypi dist/*
+	@twine upload --repository testpypi dist/* -u $(PYPI_USERNAME)
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
