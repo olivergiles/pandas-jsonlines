@@ -49,7 +49,7 @@ build:
 	@python setup.py sdist bdist_wheel
 
 pypi_test:
-	@twine upload -r testpypi dist/* -u $(PYPI_USERNAME)
+	@python3 -m twine upload --repository testpypi dist/*
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
